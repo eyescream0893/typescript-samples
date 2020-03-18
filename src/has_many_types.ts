@@ -1,19 +1,19 @@
 // IntersectionTypes
-type Dog = {
-    tail: Tail,
-    bark: () => void
-}
-type Bird = {
-    tail: Wing,
-    fly: () => void
-}
-type Kimera = Dog & Bird
+// type Dog = {
+//     tail: Tail,
+//     bark: () => void
+// }
+// type Bird = {
+//     tail: Wing,
+//     fly: () => void
+// }
+// type Kimera = Dog & Bird
 
 
-function returnNever(): never {
-    return new Error()
-}
-let unexistenceType: string & number & boolean = returnNever(); // 「string & number & boolean」はnever型
+// function returnNever(): never {
+//     return new Error()
+// }
+// let unexistenceType: string & number & boolean = returnNever(); // 「string & number & boolean」はnever型
 
 
 
@@ -26,7 +26,7 @@ value = '2'
 
 let numberOrString: (number |string)[]
 numberOrString = [0, '1']
-numberOrString = [0, "1", false] //Error
+// numberOrString = [0, "1", false] //Error
 
 // Nullable
 let nullableString: string | null
@@ -36,13 +36,13 @@ nullableString = 'null'
 let nullableStrings: (string | null)[] = []
 nullableStrings.push(null)
 nullableStrings.push('1')
-nullableStrings.push(false) //Error
+// nullableStrings.push(false) //Error
 
 // typeofキーワード
 let asString: string = ''
 let value2: typeof asString
 value2 = "value";
-value2 = 0; // Error
+// value2 = 0; // Error
 
 //typeofキーワード 型推論
 let myObject = { foo: 'foo' }
@@ -59,4 +59,4 @@ const myObject2 = {
 }
 let myObjectKey: keyof typeof myObject2;
 myObjectKey = "bar";
-myObjectKey = "qux";//Error
+// myObjectKey = "qux";//Error

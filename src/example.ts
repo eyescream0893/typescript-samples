@@ -6,6 +6,6 @@ function fee(amout): number {
   return amout * 1.4;
 }
 
-function price(amout): number {
+function price(amout): string {
   return `${fee(amout)}` //Error
 }
